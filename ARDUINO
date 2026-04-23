@@ -6,7 +6,9 @@ const int redLed = 11;
 const int buzzer = 12;
 
 unsigned long tempoAnterior = 0;
-bool buzzerLigado = false;
+
+bool buzzerAtivo = false;
+bool jaDisparou = false;
 
 void setup() {
   pinMode(greenLed, OUTPUT);
@@ -23,43 +25,41 @@ void loop() {
 
   unsigned long agora = millis();
 
-  
   if (ldrValue < 400) {
     digitalWrite(greenLed, HIGH);
     digitalWrite(yellowLed, LOW);
     digitalWrite(redLed, LOW);
 
-    noTone(buzzer);
-    buzzerLigado = false;
+    digitalWrite(buzzer, LOW);
+    buzzerAtivo = false;
+    jaDisparou = false; 
   }
 
-  
   else if (ldrValue < 600) {
     digitalWrite(greenLed, LOW);
     digitalWrite(yellowLed, HIGH);
     digitalWrite(redLed, LOW);
 
-    noTone(buzzer);
-    buzzerLigado = false;
+    digitalWrite(buzzer, LOW);
+    buzzerAtivo = false;
+    jaDisparou = false;
   }
 
-  
   else {
     digitalWrite(greenLed, LOW);
     digitalWrite(yellowLed, LOW);
     digitalWrite(redLed, HIGH);
 
-    
-    if (agora - tempoAnterior >= 3000) {
+    if (!jaDisparou) {
+      digitalWrite(buzzer, HIGH);
       tempoAnterior = agora;
+      buzzerAtivo = true;
+      jaDisparou = true;
+    }
 
-      if (buzzerLigado) {
-        noTone(buzzer);
-        buzzerLigado = false;
-      } else {
-        tone(buzzer, 3000);
-        buzzerLigado = true;
-      }
+    if (buzzerAtivo && (agora - tempoAnterior >= 3000)) {
+      digitalWrite(buzzer, LOW);
+      buzzerAtivo = false;
     }
   }
 }
