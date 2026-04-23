@@ -12,8 +12,10 @@ Funcionalidades
 O sistema realiza a leitura contínua dos dados de luz do ambiente e indica o estado atual por meio de alertas visuais e sonoros, divididos em três categorias:
 
 | **Adequado** | 🟢 LED Verde - A luminosidade está dentro dos padrões seguros para os vinhos.
+
 | **Alerta** | 🟡 LED Amarelo - A luz está aumentando e requer atenção preventiva. 
-| **Crítico** | 🔴 LED Vermelho - 🔊 Buzzer (3 segundos) | Risco aos produtos. O alarme sonoro é disparado para notificação imediata dos funcionários. |
+
+| **Crítico** | 🔴 LED Vermelho - 🔊 Buzzer (3 segundos) | Risco aos produtos. O alarme sonoro é disparado para notificação imediata dos funcionários.
 
 ---
 
