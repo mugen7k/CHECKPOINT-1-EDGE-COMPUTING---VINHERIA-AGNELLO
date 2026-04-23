@@ -1,0 +1,65 @@
+const int ldrPin = A0;
+
+const int greenLed = 9;
+const int yellowLed = 10;
+const int redLed = 11;
+const int buzzer = 12;
+
+unsigned long tempoAnterior = 0;
+bool buzzerLigado = false;
+
+void setup() {
+  pinMode(greenLed, OUTPUT);
+  pinMode(yellowLed, OUTPUT);
+  pinMode(redLed, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+
+  Serial.begin(9600);
+}
+
+void loop() {
+  int ldrValue = analogRead(ldrPin);
+  Serial.println(ldrValue);
+
+  unsigned long agora = millis();
+
+  
+  if (ldrValue < 400) {
+    digitalWrite(greenLed, HIGH);
+    digitalWrite(yellowLed, LOW);
+    digitalWrite(redLed, LOW);
+
+    noTone(buzzer);
+    buzzerLigado = false;
+  }
+
+  
+  else if (ldrValue < 600) {
+    digitalWrite(greenLed, LOW);
+    digitalWrite(yellowLed, HIGH);
+    digitalWrite(redLed, LOW);
+
+    noTone(buzzer);
+    buzzerLigado = false;
+  }
+
+  
+  else {
+    digitalWrite(greenLed, LOW);
+    digitalWrite(yellowLed, LOW);
+    digitalWrite(redLed, HIGH);
+
+    
+    if (agora - tempoAnterior >= 3000) {
+      tempoAnterior = agora;
+
+      if (buzzerLigado) {
+        noTone(buzzer);
+        buzzerLigado = false;
+      } else {
+        tone(buzzer, 3000);
+        buzzerLigado = true;
+      }
+    }
+  }
+}
