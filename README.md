@@ -5,6 +5,8 @@ Sistema de Monitoramento de Luminosidade - Vinheria Agnello
 
 Este projeto consiste em um sistema de monitoramento de luz ambiente desenvolvido para a Vinheria Agnello. Utilizando um microcontrolador Arduino e um sensor LDR, o sistema visa proteger os vinhos contra a exposição excessiva à luminosidade, que pode degradar a qualidade e o sabor do produto.
 
+Tinkercad: https://www.tinkercad.com/things/cj0rKRjhNSL-brilliant-duup/editel?returnTo=%2Fthings%2Fcj0rKRjhNSL-brilliant-duup&sharecode=uIT6OYqQ6MeOwGfKARA3Tb-BJ5CffZTDMgfNKaBSkIs
+
 ---
 
 Funcionalidades
