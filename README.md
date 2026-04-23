@@ -7,6 +7,8 @@ Este projeto consiste em um sistema de monitoramento de luz ambiente desenvolvid
 
 Tinkercad: https://www.tinkercad.com/things/cj0rKRjhNSL-brilliant-duup/editel?returnTo=%2Fthings%2Fcj0rKRjhNSL-brilliant-duup&sharecode=uIT6OYqQ6MeOwGfKARA3Tb-BJ5CffZTDMgfNKaBSkIs
 
+Video apresentação: https://youtu.be/GsBgG1j2-8A?si=IkrNyRm6ifwsCfDr
+
 ---
 
 Funcionalidades
