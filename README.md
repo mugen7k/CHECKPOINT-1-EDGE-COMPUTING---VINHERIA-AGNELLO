@@ -1,4 +1,4 @@
-# CHECKPOINT-1/2-EDGE-COMPUTING---VINHERIA-AGNELLO
+# CHECKPOINT-EDGE-COMPUTING-VINHERIA-AGNELLO
 
 
 Sistema de Monitoramento de Luminosidade, Temperatura e Umidade - Vinheria Agnello
