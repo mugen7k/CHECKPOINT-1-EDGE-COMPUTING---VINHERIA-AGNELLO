@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": -37.8, "left": 9, "attrs": {} },
+    { "type": "wokwi-breadboard-half", "id": "bb1", "top": 250, "left": -70, "attrs": {} },
+    {
+      "type": "wokwi-photoresistor-sensor",
+      "id": "ldr1",
+      "top": 243.2,
+      "left": 423.2,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -162.9,
+      "left": -53.4,
+      "attrs": { "humidity": "59.5", "temperature": "17.1" }
+    },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": 3.43, "left": 313.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "greenLed",
+      "top": 300,
+      "left": -10,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "yellowLed",
+      "top": 300,
+      "left": 40,
+      "attrs": { "color": "yellow" }
+    },
+    { "type": "wokwi-led", "id": "redLed", "top": 300, "left": 90, "attrs": { "color": "red" } },
+    { "type": "wokwi-buzzer", "id": "buzz1", "top": 300, "left": 160, "attrs": {} }
+  ],
+  "connections": [
+    [ "uno:5V", "bb1:tp.1", "red", [ "v0" ] ],
+    [ "uno:GND.1", "bb1:tn.1", "black", [ "v0" ] ],
+    [ "ldr1:VCC", "bb1:tp.5", "red", [ "v0" ] ],
+    [ "ldr1:GND", "bb1:tn.5", "black", [ "v0" ] ],
+    [ "ldr1:AO", "uno:A0", "blue", [ "h0" ] ],
+    [ "dht1:VCC", "bb1:tp.10", "red", [ "v0" ] ],
+    [ "dht1:GND", "bb1:tn.10", "black", [ "v0" ] ],
+    [ "dht1:SDA", "uno:2", "green", [ "h0" ] ],
+    [ "greenLed:A", "uno:9", "green", [ "v0" ] ],
+    [ "greenLed:C", "bb1:tn.15", "black", [ "v0" ] ],
+    [ "yellowLed:A", "uno:10", "yellow", [ "v0" ] ],
+    [ "yellowLed:C", "bb1:tn.16", "black", [ "v0" ] ],
+    [ "redLed:A", "uno:11", "red", [ "v0" ] ],
+    [ "redLed:C", "bb1:tn.17", "black", [ "v0" ] ],
+    [ "buzz1:1", "uno:12", "purple", [ "v0" ] ],
+    [ "buzz1:2", "bb1:tn.20", "black", [ "v0" ] ],
+    [ "lcd1:VSS", "bb1:tn.25", "black", [ "v0" ] ],
+    [ "lcd1:VDD", "bb1:tp.25", "red", [ "v0" ] ],
+    [ "lcd1:VO", "bb1:tn.26", "black", [ "v0" ] ],
+    [ "lcd1:RS", "uno:7", "orange", [ "h0" ] ],
+    [ "lcd1:RW", "bb1:tn.27", "black", [ "v0" ] ],
+    [ "lcd1:E", "uno:8", "orange", [ "h0" ] ],
+    [ "lcd1:D4", "uno:3", "green", [ "h0" ] ],
+    [ "lcd1:D5", "uno:4", "green", [ "h0" ] ],
+    [ "lcd1:D6", "uno:5", "green", [ "h0" ] ],
+    [ "lcd1:D7", "uno:6", "green", [ "h0" ] ],
+    [ "lcd1:A", "bb1:tp.28", "red", [ "v0" ] ],
+    [ "lcd1:K", "bb1:tn.28", "black", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
