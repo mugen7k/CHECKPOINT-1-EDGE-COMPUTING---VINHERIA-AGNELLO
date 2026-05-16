@@ -48,11 +48,11 @@ void loop() {
   // -----------------------------
   String statusLuz = "";
   if (ldrValue < 400) {
-    statusLuz = "BAIXA";
+    statusLuz = "ALTA";
   } else if (ldrValue < 600) {
     statusLuz = "MEDIA";
   } else {
-    statusLuz = "ALTA";
+    statusLuz = "BAIXA";
   }
 
   // -----------------------------
