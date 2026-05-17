@@ -10,9 +10,9 @@ Tinkercad 1: https://www.tinkercad.com/things/cj0rKRjhNSL-brilliant-duup/editel?
 
 Video apresentação 1: https://youtu.be/GsBgG1j2-8A?si=IkrNyRm6ifwsCfDr
 
-Tinkercad 2: 
+Wokwi 2: https://wokwi.com/projects/464028857753056257
 
-Video apresentação 2: 
+Video apresentação 2: https://youtu.be/32C6PoGZkLk
 
 ---
 
@@ -27,19 +27,20 @@ O sistema realiza a leitura contínua dos dados de luz, temperatura e umidade do
 | **Crítico** | 🔴 LED Vermelho - 🔊 Buzzer (3 segundos) | Risco aos produtos. O alarme sonoro é disparado para notificação imediata dos funcionários.
 
 Além dos LEDs e do buzzer, o display LCD irá apresentar mensagens como:
--
--
--
--
+
+- SISTEMA OK
+- ALERTA TEMP
+- ALTA UMIDADE
+- ALERTA LUZ
 
 ---
 
 Monitoramento de Temperatura
 
 O sensor DHT11 foi implementado para realizar a leitura da temperatura do ambiente.
-- Entre 10°C e 15°C → Temperatura ideal
-- Acima de 15°C → LCD exibe “Temperatura Alta”
-- Abaixo de 10°C → LCD exibe “Temperatura Baixa”
+- Acima de 24°C → “Temperatura Alta”
+- Acima de 20°C → LCD exibe “Temperatura média”
+- Abaixo de 20°C → LCD exibe “Temperatura Ok”
 
 Quando a temperatura sai da faixa ideal:
 🟡 LED Amarelo é acionado
@@ -85,10 +86,8 @@ Para a montagem deste protótipo, foram utilizados os seguintes componentes elet
 - 1x LED Amarelo
 - 1x LED Vermelho
 - 1x Buzzer
-- 1x Resistor de 10kΩ (para o divisor de tensão do LDR)
-- 3x Resistores de 220Ω ou 330Ω (para proteção dos LEDs)
 - 1x Protoboard
--Cabos Jumper
+- Cabos Jumper
 
 ---
 
